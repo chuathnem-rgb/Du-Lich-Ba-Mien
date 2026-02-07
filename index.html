@@ -476,6 +476,45 @@ footer{
     object-fit:contain;
     margin:10px auto;
 }
+	.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.gallery-item{
+    width:230px;
+    background:#111;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    transition:0.4s;
+}
+
+.gallery-item:hover{
+    transform:translateY(-8px) scale(1.05);
+}
+
+.gallery-item img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+}
+
+.gallery-item figcaption{
+    padding:10px;
+    text-align:center;
+    font-size:14px;
+    background:linear-gradient(180deg,#000,#111);
+    color:#fff;
+}
+
+.gallery-item strong{
+    color:#ffcc00;
+    font-size:15px;
+}
+
 </style>
 </head>
 
@@ -580,13 +619,56 @@ Văn hóa Việt Nam là sự hòa quyện giữa truyền thống và hiện đ
 <section id="gallery">
 <h2>Góc ảnh</h2>
 <div class="gallery">
-<img src="https://th.bing.com/th/id/R.bf4e198b38424870d7281cddefc1b6b5?rik=%2bBh%2fCK4dwAuhsg&pid=ImgRaw&r=0"><div>Cầu Vàng(Đà Nẵng)</div>
-<img src="https://bcp.cdnchinhphu.vn/Uploaded/dangdinhnam/2016_08_14/hinh-anh-tuong-lai-nao-cho-nganh-du-lich-tinh-quang-ninh-1.jpg">
-<img src="https://media.vov.vn/sites/default/files/styles/large/public/2020-09/99-thuyen_hoa.jpg">
-<img src="https://media.vneconomy.vn/w800/images/upload/2022/09/05/rice-field-terrace-vietnam-shutterstock-554460046-d71ff868b1.jpeg">
-<img src="https://toquoc.mediacdn.vn/Uploaded/gamhh/2017_11_06/10_GGIZ.jpg">
-<img src="https://www.sunlife.com.vn/content/dam/sunlife/regional/vietnam/images/du-lich-viet-nam-2020-1.jpg">
-<img src="https://www.vnbuyerguide.com/img_data/images/756083584333-screenshot-20230117-170955-photos-8611[1].jpg">
+
+  <figure class="gallery-item">
+    <img src="https://toquoc.mediacdn.vn/Uploaded/gamhh/2017_11_06/10_GGIZ.jpg">
+    <figcaption>
+      <strong>Vịnh Hạ Long</strong><br>
+      Quảng Ninh
+    </figcaption>
+  </figure>
+
+  <figure class="gallery-item">
+    <img src="https://th.bing.com/th/id/R.bf4e198b38424870d7281cddefc1b6b5?rik=%2bBh%2fCK4dwAuhsg&pid=ImgRaw&r=0">
+    <figcaption>
+      <strong>Cầu Rồng</strong><br>
+      Đà Nẵng
+    </figcaption>
+  </figure>
+
+  <figure class="gallery-item">
+    <img src="https://img.tripi.vn/cdn-cgi/image/width=700,height=700/https://gcs.tripi.vn/public-tripi/tripi-feed/img/476157fLj/anh-mo-ta.png">
+    <figcaption>
+      <strong>Sầm Sơn</strong><br>
+      Thanh Hoá
+    </figcaption>
+  </figure>
+  <figure class="gallery-item">
+  <img src="https://media.vov.vn/sites/default/files/styles/large/public/2020-09/99-thuyen_hoa.jpg">
+  <figcaption>
+    <strong>Phố cổ Hội An</strong><br>
+    Quảng Nam
+  </figcaption>
+</figure>
+
+<figure class="gallery-item">
+  <img src="https://media.vneconomy.vn/w800/images/upload/2022/09/05/rice-field-terrace-vietnam-shutterstock-554460046-d71ff868b1.jpeg">
+  <figcaption>
+    <strong>Sa Pa</strong><br>
+    Lào Cai
+  </figcaption>
+</figure>
+
+<figure class="gallery-item">
+  <img src="https://www.vnbuyerguide.com/img_data/images/756083584333-screenshot-20230117-170955-photos-8611[1].jpg">
+  <figcaption>
+    <strong>Tam Cốc </strong><br>
+    Ninh Bình
+  </figcaption>
+</figure>
+
+</figure>
+
 
 </div>
 </section>
@@ -605,7 +687,7 @@ Văn hóa Việt Nam là sự hòa quyện giữa truyền thống và hiện đ
 </div>
 
 <div class="contact">
-    <img src="https://www.facebook.com/photo/?fbid=1196259986019503&set=a.101097892202390"alt="Admin">
+    <img src="https://scontent.fdad4-1.fna.fbcdn.net/v/t39.30808-6/625900470_1199590165686485_3477985057676072241_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHBmzz6P-SSBTpAhsGo3qdq7Y8-BcyQ-qHtjz4FzJD6oelxlhGADx3UQF63Q-61wYFxX3tiPEyJbBayIlUjMuRj&_nc_ohc=_i7Y-FzJL68Q7kNvwFSAupm&_nc_oc=AdmvaH4TkTAqlJiWEAu1WkCIoSFpXeI6u3BB6MpbYkMwNgXpsUe1jYPBRpFuA69jhM0&_nc_zt=23&_nc_ht=scontent.fdad4-1.fna&_nc_gid=jRnIRSLSjbQEekVyboWegw&oh=00_AfuB3wsbeByXXLDBj6hnMfkA75sU7W9isBnXuFUTtzxZAw&oe=698D157D"alt="Admin">
     <p><b>Nhóm:</b> Cầu Vồng Khuyết – 12C3</p>
     <p>
         <b>Admin:</b>
@@ -711,5 +793,6 @@ function toggleThanks(){
 
 </body>
 </html>
+
 
 
