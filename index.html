@@ -757,53 +757,8 @@ Văn hóa Việt Nam là sự hòa quyện giữa truyền thống và hiện đ
         </p>
     </div>
 </section>
-
-
 <script>
-function tim(){
-    let p=document.getElementById("place").value;
-    if(p===""){alert("Vui lòng nhập địa điểm");return;}
-    document.getElementById("tb").style.display="block";
-    window.open("https://earth.google.com/web/search/"+p,"_blank");
-}
-
-function guiBinhLuan(){
-    let c=document.getElementById("comment").value;
-    if(c===""){alert("Bạn chưa nhập bình luận");return;}
-    document.getElementById("tbComment").style.display="block";
-    document.getElementById("comment").value="";
-}
-
-window.onscroll=function(){
-    document.getElementById("topBtn").style.display=
-        window.scrollY>300?"flex":"none";
-}
-
-let playing=false;
-let music=document.getElementById("bgMusic");
-
-function toggleMusic(){
-    if(!playing){
-        music.volume=0.4;
-        music.play();
-        document.getElementById("musicBtn").innerHTML="🔈";
-        playing=true;
-    }else{
-        music.pause();
-        document.getElementById("musicBtn").innerHTML="🔊";
-        playing=false;
-    }
-}
-
-function toggleThanks(){
-    document.getElementById("triAn").classList.toggle("active");
-}
-<div class="search-box">
-    <input type="text" id="searchInput" placeholder="Tìm kiếm địa điểm...">
-    <button onclick="searchMap()">Tìm kiếm</button>
-</div>
-
-<script>
+// ===== TÌM KIẾM GOOGLE MAPS =====
 function tim(){
     const p = document.getElementById("place").value.trim();
 
@@ -815,27 +770,47 @@ function tim(){
     document.getElementById("tb").style.display = "block";
 
     const url = "https://www.google.com/maps/search/?api=1&query=" 
-                + encodeURIComponent(p);
+              + encodeURIComponent(p);
 
     window.open(url, "_blank");
 }
-</script>
 
-<script>
-let music = document.getElementById("bgMusic");
+// ===== NÚT NHẠC =====
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicBtn");
 let playing = false;
 
-function toggleMusic() {
-    if (!playing) {
-        music.volume = 0.4;
+function toggleMusic(){
+    if(!playing){
         music.play();
-        document.getElementById("musicBtn").innerText = "🔈";
-        playing = true;
-    } else {
+        btn.innerHTML = "🔈";
+    }else{
         music.pause();
-        document.getElementById("musicBtn").innerText = "🔊";
-        playing = false;
+        btn.innerHTML = "🔊";
     }
+    playing = !playing;
+}
+
+// ===== NÚT LÊN ĐẦU =====
+window.addEventListener("scroll",()=>{
+    document.getElementById("topBtn").style.display =
+        window.scrollY > 300 ? "flex" : "none";
+});
+
+// ===== BÌNH LUẬN =====
+function guiBinhLuan(){
+    const c = document.getElementById("comment").value.trim();
+    if(c === ""){
+        alert("Bạn chưa nhập bình luận!");
+        return;
+    }
+    document.getElementById("tbComment").style.display = "block";
+    document.getElementById("comment").value = "";
+}
+
+// ===== LỜI TRI ÂN =====
+function toggleThanks(){
+    document.getElementById("triAn").classList.toggle("active");
 }
 </script>
 
@@ -843,7 +818,10 @@ function toggleMusic() {
 
 
 
-</script>
+
+
+
+
 
 </body>
 </html>
