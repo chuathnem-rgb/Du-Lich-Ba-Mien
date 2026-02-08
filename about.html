@@ -7,7 +7,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-*{box-sizing:border-box}
+*{
+    box-sizing:border-box
+}
+
 body{
     margin:0;
     font-family:'Segoe UI',Arial,sans-serif;
@@ -15,19 +18,40 @@ body{
     color:white;
 }
 
-/* ===== HEADER ===== */
+/* ===== HEADER (ĐÃ THAY ẢNH NHÓM) ===== */
 header{
     text-align:center;
-    padding:70px 20px;
-    background:linear-gradient(90deg,#00c6ff,#0072ff);
+    padding:90px 20px;
+    min-height:700px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.45)
+        ),
+        url("https://scontent.fdad4-1.fna.fbcdn.net/v/t39.30808-6/630096548_1202184355427066_9117298761604136955_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEJfXgRZIbaDPwEIm3fGfa2VRdnTD4e4Q5VF2dMPh7hDh3uQfmwDI7BldMf2rq_OtWlVoDnjv2Bjznq120Rju95&_nc_ohc=w1WJ29gjhXIQ7kNvwGRSBJd&_nc_oc=AdnB-18H5CCeVwNJD-Trp0hb3xcXe-iEJyNgoKgjAkqJ_b-DNodj0GbvrdJXIJmv7eU&_nc_zt=23&_nc_ht=scontent.fdad4-1.fna&_nc_gid=FfwO78D5glF-sWhRL5wnZg&oh=00_AftRhNosCasvhOxS0zL_3FWl52QDfafTUKoMsote-XjT6Q&oe=698E7D4D");
+
+    background-size:cover;
+    background-position:center bottom; /* kéo ảnh xuống */
+    background-repeat:no-repeat;
 }
-header h1{font-size:42px;margin:0}
-header p{font-size:18px;opacity:.9;margin-top:10px}
+header h1{
+    font-size:42px;
+    margin:0;
+}
+
+header p{
+    font-size:18px;
+    opacity:.9;
+    margin-top:10px;
+}
 
 /* ===== SECTION ===== */
-section{padding:60px 6%}
+section{
+    padding:60px 6%;
+}
 
-/* ===== TEAM GRID (HIỆN ĐỦ THÀNH VIÊN) ===== */
+/* ===== TEAM GRID ===== */
 .team{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -47,14 +71,11 @@ section{padding:60px 6%}
     box-shadow:0 0 22px rgba(0,255,255,.45);
     border:2px solid rgba(0,255,255,.4);
 }
+
 .member:hover{
     transform:translateY(-10px);
     box-shadow:0 0 40px cyan;
     border-color:cyan;
-}
-.member.active{
-    transform:scale(1.06);
-    box-shadow:0 0 55px cyan;
 }
 
 .member::before{
@@ -81,6 +102,7 @@ section{padding:60px 6%}
     margin:6px 0 4px;
     font-size:18px;
 }
+
 .member p{
     margin:0;
     font-size:14px;
@@ -105,6 +127,7 @@ section{padding:60px 6%}
     transform:scale(.7);
     transition:.3s;
 }
+
 .member:hover .fb{
     opacity:1;
     transform:scale(1);
@@ -116,6 +139,7 @@ section{padding:60px 6%}
     padding:60px 6%;
     border-radius:35px;
     text-align:center;
+
     background:linear-gradient(
         270deg,
         #00c6ff,
@@ -127,6 +151,7 @@ section{padding:60px 6%}
     background-size:600% 600%;
     animation:gradientMove 10s ease infinite;
 }
+
 @keyframes gradientMove{
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -139,6 +164,7 @@ section{padding:60px 6%}
     gap:25px;
     margin-top:40px;
 }
+
 .photos img{
     width:100%;
     height:220px;
@@ -148,6 +174,7 @@ section{padding:60px 6%}
     transition:.4s;
     box-shadow:0 0 25px rgba(0,255,255,.5);
 }
+
 .photos img:hover{
     transform:scale(1.1);
     box-shadow:0 0 45px cyan;
@@ -158,11 +185,32 @@ section{padding:60px 6%}
     text-align:center;
     margin:60px 0;
 }
+
 .back a{
     color:#ffeb3b;
     font-weight:bold;
     text-decoration:none;
     font-size:18px;
+}
+/* ===== VIDEO GIỮA ===== */
+.video-box{
+    width:100%;
+    height:220px;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 0 25px rgba(0,255,255,.5);
+    transition:.4s;
+}
+
+.video-box video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.video-box:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 45px cyan;
 }
 </style>
 </head>
@@ -233,9 +281,14 @@ section{padding:60px 6%}
 <h2>📸 Khoảnh khắc của chúng tôi</h2>
 
 <div class="photos">
-    <img src ="https://scontent.fdad4-1.fna.fbcdn.net/v/t1.15752-9/613181876_1206545418340729_296831510624702272_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_ohc=y8nDgWLk7IYQ7kNvwH8zqB0&_nc_oc=AdlFVc0Y9YAT45zObLj05xOeTOB9EHgMn4A6xe5iA-XjYyOGhxsncut7CGK-tDxoSl0&_nc_zt=23&_nc_ht=scontent.fdad4-1.fna&oh=03_Q7cD4gE2Fila8aMjoMB-vD8JpVKDQ_3xqyX0hLWv04brZ2N_hg&oe=69AD541A">
-	<img src ="https://scontent.fdad4-1.fna.fbcdn.net/v/t1.15752-9/626002449_870840862243525_6740524378363635709_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_ohc=kKoLsZMG1EUQ7kNvwEao9iw&_nc_oc=AdnQk_DsquNQKcZr5WohV1oNm3x0jqJLqIiXvSjoNl0PgNeN7QNKDBIDa4SZpwtf2aU&_nc_zt=23&_nc_ht=scontent.fdad4-1.fna&oh=03_Q7cD4gFzh6wBD2wq0G4MMcsvhdobtC7XQzzMAHKb52lnbgXMjQ&oe=69AD7283">
-	<img src ="https://scontent.fdad4-1.fna.fbcdn.net/v/t1.15752-9/624517470_1424612175776193_8030322315674348352_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=9f807c&_nc_ohc=8kwquxXahGoQ7kNvwH0ACRl&_nc_oc=Adnfr--hBjHp6MtJzB9GBRT-Jj-wIhyTNhk0huqL1IbSdI7Pm7YHQPHSn2q5MdAlPE4&_nc_zt=23&_nc_ht=scontent.fdad4-1.fna&oh=03_Q7cD4gEjyPIIPL4VB-c9k0kZ1h7OU04vl_87joIZlNiXeMaiBg&oe=69AD76CA">
+    <img src ="https://scontent.fdad4-1.fna.fbcdn.net/v/t1.15752-9/625896613_1399712148301500_3104678016998118553_n.jpg?stp=dst-jpg_s2048x2048_tt6&_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeEehOkerllCWGOoxItoAtB8pkRRGWtf6semRFEZa1_qxx-QqRAfHX4M7PqZ8zyP_5ZcWtGlvk_9XpSokx8qxTQP&_nc_ohc=8tFQ35-DsH0Q7kNvwFK5c1x&_nc_oc=Adl6E0FV7d9qdiiGEEjkIQlWJpuM3jl7BmXp-KYxC14SarycleodTpcd_CWsbdtBcMk&_nc_zt=23&_nc_ht=scontent.fdad4-1.fna&oh=03_Q7cD4gGglx3CuTYSEP_CtxA3d8-ZduZ-dqRBPeLuY-Fygl0sjg&oe=69B026FA">
+  <!-- VIDEO Ở GIỮA -->
+    <div class="video-box">
+        <video controls>
+            <source src="videonhom.mp4" type="video/mp4">
+        </video>
+    </div>
+	<img src ="https://scontent.fdad4-1.fna.fbcdn.net/v/t1.15752-9/623362573_1299770615324399_3367899912351440185_n.jpg?stp=dst-jpg_s2048x2048_tt6&_nc_cat=111&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeFAX2FTKo8v8sT9Kk0pYMvwcVkoerq7f2hxWSh6urt_aHbgwIr4TRxCwBHN4RV9PSdXbGmceSH6p6ifI2eCpqoU&_nc_ohc=7Ez4DFB5hIsQ7kNvwFDBDtL&_nc_oc=Adn_OMCGqAoTdzgCPFrok7pduMYfwbZ_GzYxnUPOahHnUhjbbdfWPPPkwOcdBDUAhMY&_nc_zt=23&_nc_ht=scontent.fdad4-1.fna&oh=03_Q7cD4gF-_fFucgCTQsoSD9rDkafqQoRm9_x5ixYuANIT4kV2FA&oe=69B0035F">
 </div>
 </section>
 
