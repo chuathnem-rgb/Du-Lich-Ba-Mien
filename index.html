@@ -676,10 +676,9 @@ Văn hóa Việt Nam là sự hòa quyện giữa truyền thống và hiện đ
 <section id="timkiem">
 <h2>🔍 Tìm kiếm địa điểm</h2>
 <input id="place" placeholder="Ví dụ: Đà Nẵng">
-<button onclick="tim()">Mở Google Earth</button>
-<div id="tb" class="thongbao">🚀 Đang mở Google Earth 3D cho bạn...</div>
+<button onclick="tim()">Mở Google Maps</button>
+<div id="tb" class="thongbao">📍 Đang mở Google Maps cho bạn...</div>
 </section>
-
 <section id="lienhe">
 
 <div class="title-wrap">
@@ -749,12 +748,17 @@ Văn hóa Việt Nam là sự hòa quyện giữa truyền thống và hiện đ
 
 <script>
 function tim(){
-    let p=document.getElementById("place").value;
-    if(p===""){alert("Vui lòng nhập địa điểm");return;}
-    document.getElementById("tb").style.display="block";
-    window.open("https://earth.google.com/web/search/"+p,"_blank");
+    let p = document.getElementById("place").value.trim();
+    if(p === ""){
+        alert("Vui lòng nhập địa điểm");
+        return;
+    }
+    document.getElementById("tb").style.display = "block";
+    window.open(
+        "https://www.google.com/maps/search/" + encodeURIComponent(p),
+        "_blank"
+    );
 }
-
 function guiBinhLuan(){
     let c=document.getElementById("comment").value;
     if(c===""){alert("Bạn chưa nhập bình luận");return;}
@@ -793,6 +797,7 @@ function toggleThanks(){
 
 </body>
 </html>
+
 
 
 
