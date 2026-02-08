@@ -599,7 +599,7 @@ Văn hóa Việt Nam là sự hòa quyện giữa truyền thống và hiện đ
 </section>
 
 <section id="gallery">
-<h2 📸 Góc ảnh & 🎬 Video</h2>
+<h2>📸 Góc ảnh & 🎬 Video</h2>
 
 
 
@@ -804,6 +804,24 @@ function searchMap() {
     }
 }
 </script>
+<script>
+let music = document.getElementById("bgMusic");
+let playing = false;
+
+function toggleMusic() {
+    if (!playing) {
+        music.volume = 0.4;
+        music.play();
+        document.getElementById("musicBtn").innerText = "🔈";
+        playing = true;
+    } else {
+        music.pause();
+        document.getElementById("musicBtn").innerText = "🔊";
+        playing = false;
+    }
+}
+</script>
+
 
 
 
