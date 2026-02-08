@@ -514,6 +514,26 @@ footer{
     color:#ffcc00;
     font-size:15px;
 }
+	.video-box{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.video-box video{
+    width:220px;
+    max-width:90%;
+    border-radius:14px;
+    box-shadow:0 0 18px rgba(0,255,255,.6);
+    transition:.4s;
+}
+
+.video-box video:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 45px gold;
+}
 
 </style>
 </head>
@@ -617,7 +637,7 @@ Văn hóa Việt Nam là sự hòa quyện giữa truyền thống và hiện đ
 </section>
 
 <section id="gallery">
-<h2>Góc ảnh</h2>
+<h2>>📸 Góc ảnh & 🎬 Video</h2>
 <div class="gallery">
 
   <figure class="gallery-item">
@@ -670,6 +690,25 @@ Văn hóa Việt Nam là sự hòa quyện giữa truyền thống và hiện đ
 </figure>
 
 
+</div>
+	</div>
+<h3 style="margin-top:40px;color:#006994">🎬 Video địa điểm</h3>
+
+<div class="video-box">
+    <video controls>
+        <source src="Quynhon.mp4" type="video/mp4"> 
+    </video>
+
+    <video controls>
+        <source src="didaoo.mp4" type="video/mp4">
+    </video>
+	
+    <video controls>
+        <source src="vietnam.mp4" type="video/mp4">
+    </video>
+	 <video controls>
+        <source src="chill.mp4" type="video/mp4">
+    </video>
 </div>
 </section>
 
@@ -797,6 +836,7 @@ function toggleThanks(){
 
 </body>
 </html>
+
 
 
 
